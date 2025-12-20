@@ -1,0 +1,150 @@
+---
+
+---
+
+<section id="projects" class="py-20 px-4">
+  <div class="max-w-6xl w-full mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
+      <span class="text-indigo-400">Production</span> Projects
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Project 1 -->
+      <a
+        href="https://www.servisbicar.cz"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group relative block bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10"
+      >
+        <div
+          class="h-48 bg-slate-800 relative group-hover:scale-105 transition-transform duration-500"
+        >
+          <div
+            class="absolute inset-0 flex items-center justify-center text-slate-600 font-bold text-4xl bg-linear-to-br from-slate-800 to-slate-900"
+          >
+            <img
+              src="src/assets/Bicar logo.webp"
+              alt="Servis Bicar logo"
+              height="100"
+              width="100"
+              class="brightness-0 invert"
+            />
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3
+                class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors"
+              >
+                Servis Bicar
+              </h3>
+              <p class="text-indigo-400 text-sm mt-1">2022</p>
+            </div>
+            <span
+              class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full border border-slate-700"
+              >Web</span
+            >
+          </div>
+          <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+            Professional website for an auto service center. Designed to provide
+            clear information and easy contact for customers.
+          </p>
+          <div class="flex items-center gap-2">
+            {
+              [
+                {
+                  name: "HTML",
+                  icon: `
+            <svg viewBox="0 0 128 128" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+            </svg>
+          `,
+                },
+                {
+                  name: "CSS",
+                  icon: `
+            <svg viewBox="0 0 128 128" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"></path><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"></path><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"></path><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"></path>
+            </svg>
+          `,
+                },
+                {
+                  name: "JavaScript",
+                  icon: `
+            <svg viewBox="0 0 128 128" class="w-6 h-6">
+            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+            </svg>
+          `,
+                },
+              ].map((skill) => (
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-3 size-min rounded-lg transition-colors text-slate-300 text-sm font-medium">
+                  <Fragment set:html={skill.icon} />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 2 -->
+      <div
+        class="group relative block bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10"
+      >
+        <div
+          class="h-48 bg-slate-800 relative group-hover:scale-105 transition-transform duration-500"
+        >
+          <div
+            class="absolute inset-0 flex items-center justify-center text-slate-600 font-bold text-4xl bg-linear-to-br from-slate-800 to-slate-900"
+          >
+            <img
+              src="src/assets/HabitCommit_icon.webp"
+              alt="HabitCommit logo"
+              height="100"
+              width="100"
+              class="rounded-xl"
+            />
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3
+                class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors"
+              >
+                HabitCommit
+              </h3>
+              <p class="text-indigo-400 text-sm mt-1">2025</p>
+            </div>
+            <span
+              class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full border border-slate-700"
+              >Mobile App</span
+            >
+          </div>
+          <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+            A comprehensive habit tracking mobile application designed to help
+            users build and maintain positive routines.
+          </p>
+          <div>
+            {
+              [
+                {
+                  name: "Flutter",
+                  icon: `
+            <svg viewBox="0 0 128 128" class="w-6 h-6">
+            <g fill="#3FB6D3"><path d="M12.3 64.2L76.3 0h39.4L32.1 83.6zM76.3 128h39.4L81.6 93.9l34.1-34.8H76.3L42.2 93.5z"></path></g><path fill="#27AACD" d="M81.6 93.9l-20-20-19.4 19.6 19.4 19.6z"></path><path fill="#19599A" d="M115.7 128L81.6 93.9l-20 19.2L76.3 128z"></path><linearGradient id="flutter-original-a" gradientUnits="userSpaceOnUse" x1="59.365" y1="116.36" x2="86.825" y2="99.399"><stop offset="0" stop-color="#1b4e94"></stop><stop offset=".63" stop-color="#1a5497"></stop><stop offset="1" stop-color="#195a9b"></stop></linearGradient><path fill="url(#flutter-original-a)" d="M61.6 113.1l30.8-8.4-10.8-10.8z"></path>
+            </svg>
+          `,
+                },
+              ].map((skill) => (
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-3 size-min rounded-lg transition-colors text-slate-300 text-sm font-medium">
+                  <Fragment set:html={skill.icon} />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
