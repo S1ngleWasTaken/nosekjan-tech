@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import dashboardImg from "../../assets/habitcommit/dashboard.png";
+import addHabitImg from "../../assets/habitcommit/add_habit.png";
+import statsImg from "../../assets/habitcommit/stats.png";
+---
+
+<section id="hero" class="relative py-20 lg:py-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h1
+        class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-6 drop-shadow-sm"
+      >
+        HabitCommit.
+      </h1>
+      <p
+        class="text-xl md:text-2xl text-gray-300 font-light mb-10 leading-relaxed"
+      >
+        Budujte návyky, které vydrží. Sledujte svůj pokrok, analyzujte data a
+        dosahujte svých cílů s elegancí.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#features"
+          class="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-all shadow-lg hover:shadow-blue-500/30"
+        >
+          Prozkoumat funkce
+        </a>
+        <a
+          href="#support"
+          class="px-8 py-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white font-medium border border-gray-700 transition-all"
+        >
+          Kontaktovat podporu
+        </a>
+      </div>
+    </div>
+
+    <div class="relative mx-auto mt-16 max-w-5xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div
+          class="transform md:translate-y-12 transition-transform duration-500 hover:-translate-y-2"
+        >
+          <Image
+            src={addHabitImg}
+            alt="Přidat nový návyk"
+            class="rounded-[2.5rem] shadow-2xl border-4 border-gray-800 mx-auto w-64 md:w-full max-w-[280px]"
+          />
+        </div>
+        <div
+          class="z-10 transform scale-110 transition-transform duration-500 hover:scale-115"
+        >
+          <Image
+            src={dashboardImg}
+            alt="Hlavní dashboard"
+            class="rounded-[2.5rem] shadow-2xl shadow-blue-500/20 border-4 border-gray-800 mx-auto w-64 md:w-full max-w-[280px]"
+          />
+        </div>
+        <div
+          class="transform md:translate-y-12 transition-transform duration-500 hover:-translate-y-2"
+        >
+          <Image
+            src={statsImg}
+            alt="Detailní statistiky"
+            class="rounded-[2.5rem] shadow-2xl border-4 border-gray-800 mx-auto w-64 md:w-full max-w-[280px]"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Elements -->
+  <div
+    class="absolute top-1/4 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -z-10 animate-pulse"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10 animate-pulse"
+    style="animation-delay: 1s;"
+  >
+  </div>
+</section>

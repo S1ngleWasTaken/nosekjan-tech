@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/habitcommit/Hero.astro";
+import Features from "../components/habitcommit/Features.astro";
+import PrivacyPolicy from "../components/habitcommit/PrivacyPolicy.astro";
+import Support from "../components/habitcommit/Support.astro";
+
+// We can override the title for this specific page if needed, but Layout usually takes a title prop.
+// Checking Layout.astro, it has a hardcoded title: <title>Jan Nosek - Web & Mobile Developer</title>
+// Ideally we should pass a title prop to Layout, but for now I will use it as is or maybe the user wants to update Layout to accept props.
+// Given the instructions, I'll stick to using the existing Layout but I might need to suggest modifying Layout later if the title needs to be "HabitCommit".
+// Currently Layout.astro does NOT accept a title prop. I will use it as is to keep consistent style.
+---
+
+<Layout>
+  <main class="bg-slate-950 min-h-screen text-white">
+    <Hero />
+    <Features />
+    <PrivacyPolicy />
+    <Support />
+  </main>
+</Layout>
