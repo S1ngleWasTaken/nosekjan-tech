@@ -1,0 +1,55 @@
+---
+import me from "../assets/me.webp";
+---
+
+<section id="about" class="py-20 px-4">
+  <div class="max-w-6xl w-full mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Profile Image Column -->
+      <div class="flex justify-center md:justify-end order-1 md:order-2">
+        <div class="relative w-64 h-64 md:w-80 md:h-80">
+          <div
+            class="absolute inset-0 bg-indigo-500 rounded-full blur-2xl opacity-20 animate-pulse"
+          >
+          </div>
+          <div
+            class="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl bg-slate-800 flex items-center justify-center group"
+          >
+            <img
+              src={me.src}
+              alt="Jan Nosek"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Column -->
+      <div class="order-2 md:order-1 text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+          O <span class="text-indigo-400">mně</span>
+        </h2>
+        <div class="space-y-4 text-slate-300 text-lg leading-relaxed">
+          <p>
+            Ahoj! Jsem <span class="font-bold text-white">Jan Nosek</span>, rád
+            vytvářím digitální řešení, která jsou nejen funkční, ale také
+            vzhledově a uživatelsky přívětivé.
+          </p>
+          <p>
+            Se silným základem v moderních webových technologiích a
+            cross-platform frameworkech, se specializuji ve vytváření
+            reprezentativních <span class="text-white font-bold"
+              >webových stránek</span
+            >, kde moje cesta začala, a intuitivních <span
+              class="text-white font-bold">mobilních aplikací</span
+            >.
+          </p>
+          <p>
+            Protože programuji i pro radost, naleznete zde některé z mých
+            <span class="text-white font-bold">osobních projektů</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
