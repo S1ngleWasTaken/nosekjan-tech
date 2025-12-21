@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-surface: #171717;
+  --color-primary: #00f2ea;
+  --color-primary-dim: #00f2ea20;
+  --color-secondary: #ccf381;
+  --color-text: #ffffff;
+  --color-text-muted: #a3a3a3;
+  
+  --font-main: 'Outfit', sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-bg text-text font-main;
+  }
+  
+  body {
+    @apply m-0 p-0 w-full overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-extrabold uppercase tracking-tight mb-4;
+  }
+
+  p {
+    @apply leading-relaxed text-text-muted mb-4;
+  }
+}

@@ -1,0 +1,97 @@
+---
+import about from "../../assets/gym_example/about.png";
+import Image from "astro/components/Image.astro";
+---
+
+<section id="about" class="py-20">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+      <div
+        class="image-wrapper relative rounded-2xl overflow-hidden group order-2 md:order-1"
+      >
+        <Image
+          src={about}
+          alt="Trenér pomáhá klientovi"
+          class="w-full h-auto rounded-2xl transition-transform duration-500 ease-out group-hover:scale-105 block"
+        />
+        <div
+          class="experience-badge absolute bottom-5 right-5 bg-surface p-6 rounded-2xl border border-white/10 text-center shadow-xl z-10"
+        >
+          <span
+            class="block text-4xl md:text-5xl font-extrabold text-primary leading-none"
+            >10+</span
+          >
+          <span class="text-xs md:text-sm uppercase tracking-wider text-text"
+            >Let Zkušeností</span
+          >
+        </div>
+      </div>
+      <div class="content order-1 md:order-2">
+        <h4
+          class="text-primary text-sm tracking-[0.1em] mb-2 uppercase font-semibold"
+        >
+          Kdo Jsme
+        </h4>
+        <h2
+          class="text-3xl md:text-5xl font-extrabold uppercase mb-6 leading-tight"
+        >
+          Víc Než Jen <span class="text-primary">Fitness</span>
+        </h2>
+        <p class="text-text-muted leading-relaxed mb-8">
+          V Neon Gym věříme, že fitness není jen o zvedání činek, ale o celkovém
+          životním stylu. Vybudovali jsme prostor, kde se motivace potkává s
+          nejmodernější technologií.
+        </p>
+        <ul class="space-y-6 mb-8">
+          <li class="flex items-start gap-4">
+            <span
+              class="flex items-center justify-center min-w-[50px] h-[50px] bg-primary/20 rounded-full text-2xl text-primary"
+              >💪</span
+            >
+            <div class="text">
+              <strong class="block text-lg font-bold text-white"
+                >Špičkové Vybavení</strong
+              >
+              <small class="text-text-muted text-sm"
+                >Technogym & Rogue fitness stroje</small
+              >
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span
+              class="flex items-center justify-center min-w-[50px] h-[50px] bg-primary/20 rounded-full text-2xl text-primary"
+              >🧘</span
+            >
+            <div class="text">
+              <strong class="block text-lg font-bold text-white"
+                >Wellness Zóna</strong
+              >
+              <small class="text-text-muted text-sm"
+                >Sauna, pára a relaxační místnost</small
+              >
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span
+              class="flex items-center justify-center min-w-[50px] h-[50px] bg-primary/20 rounded-full text-2xl text-primary"
+              >🏆</span
+            >
+            <div class="text">
+              <strong class="block text-lg font-bold text-white"
+                >Profesionální Tým</strong
+              >
+              <small class="text-text-muted text-sm"
+                >Certifikovaní trenéři pro váš progres</small
+              >
+            </div>
+          </li>
+        </ul>
+        <a
+          href="#contact"
+          class="inline-block font-bold uppercase border-b-2 border-secondary pb-1 text-white hover:text-primary transition-colors"
+          >Poznej Náš Tým &rarr;</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

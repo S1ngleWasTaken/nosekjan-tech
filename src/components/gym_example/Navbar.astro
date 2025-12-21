@@ -1,0 +1,76 @@
+---
+---
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 py-6 transition-all duration-300 bg-transparent">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="#" class="text-2xl font-extrabold tracking-tight text-text z-[1001]">NEON<span class="text-primary">GYM</span></a>
+        
+        <button id="menu-toggle" aria-label="Menu" class="md:hidden flex flex-col gap-[6px] z-[1001] bg-none border-none cursor-pointer">
+            <span class="bar w-[25px] h-[2px] bg-white transition-all duration-300"></span>
+            <span class="bar w-[25px] h-[2px] bg-white transition-all duration-300"></span>
+            <span class="bar w-[25px] h-[2px] bg-white transition-all duration-300"></span>
+        </button>
+
+        <nav id="nav-menu" class="fixed top-0 right-[-100%] w-full h-screen bg-bg flex justify-center items-center transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] md:static md:w-auto md:h-auto md:bg-transparent md:flex-row md:justify-end md:right-0">
+            <ul class="flex flex-col text-center gap-12 md:flex-row md:gap-8 list-none m-0 p-0">
+                <li><a href="#hero" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Domů</a></li>
+                <li><a href="#about" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">O nás</a></li>
+                <li><a href="#pricing" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Ceník</a></li>
+                <li><a href="#gallery" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Galerie</a></li>
+                <li><a href="#staff" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Trenéři</a></li>
+                <li><a href="#contact" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navbar = document.getElementById('navbar');
+
+    menuToggle?.addEventListener('click', () => {
+        navMenu?.classList.toggle('right-0');
+        navMenu?.classList.toggle('right-[-100%]');
+        
+        // Toggle hamburger animation
+        const bars = menuToggle.querySelectorAll('.bar');
+        if (navMenu?.classList.contains('right-0')) {
+            // Active state
+            bars[0].classList.add('translate-y-[8px]', 'rotate-45');
+            bars[1].classList.add('opacity-0');
+            bars[2].classList.add('-translate-y-[8px]', '-rotate-45');
+        } else {
+            // Inactive state
+            bars[0].classList.remove('translate-y-[8px]', 'rotate-45');
+            bars[1].classList.remove('opacity-0');
+            bars[2].classList.remove('-translate-y-[8px]', '-rotate-45');
+        }
+    });
+
+    // Close menu when clicking a link
+    navMenu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu?.classList.add('right-[-100%]');
+            navMenu?.classList.remove('right-0');
+            
+             // Reset hamburger
+            const bars = menuToggle?.querySelectorAll('.bar');
+            if(bars) {
+                bars[0].classList.remove('translate-y-[8px]', 'rotate-45');
+                bars[1].classList.remove('opacity-0');
+                bars[2].classList.remove('-translate-y-[8px]', '-rotate-45');
+            }
+        });
+    });
+
+    // Scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar?.classList.add('bg-bg/80', 'backdrop-blur-md', 'border-b', 'border-white/10', '!py-4');
+            navbar?.classList.remove('bg-transparent', 'py-6');
+        } else {
+            navbar?.classList.remove('bg-bg/80','backdrop-blur-md', 'border-b', 'border-white/10', '!py-4');
+            navbar?.classList.add('bg-transparent', 'py-6');
+        }
+    });
+</script>

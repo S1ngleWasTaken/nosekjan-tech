@@ -1,0 +1,102 @@
+---
+import { getImage } from "astro:assets";
+import hero1 from "../../assets/gym_example/hero-1.png";
+import hero2 from "../../assets/gym_example/hero-2.png";
+import hero3 from "../../assets/gym_example/hero-3.png";
+
+const hero1Opt = await getImage({ src: hero1, format: "webp" });
+const hero2Opt = await getImage({ src: hero2, format: "webp" });
+const hero3Opt = await getImage({ src: hero3, format: "webp" });
+---
+
+<section
+  id="hero"
+  class="relative h-screen w-full flex items-center justify-center overflow-hidden p-0"
+>
+  <div class="slider absolute top-0 left-0 w-full h-full z-10">
+    <div
+      class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-[1500ms] ease-in-out transform scale-100 transition-transform duration-[6000ms] ease-linear active:opacity-100 active:scale-105"
+      style={`background-image: url('${hero1Opt.src}')`}
+    >
+    </div>
+    <div
+      class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-[1500ms] ease-in-out transform scale-100 transition-transform duration-[6000ms] ease-linear"
+      style={`background-image: url('${hero2Opt.src}')`}
+    >
+    </div>
+    <div
+      class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-[1500ms] ease-in-out transform scale-100 transition-transform duration-[6000ms] ease-linear"
+      style={`background-image: url('${hero3Opt.src}')`}
+    >
+    </div>
+  </div>
+
+  <div
+    class="overlay absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 to-black/80 z-20"
+  >
+  </div>
+
+  <div class="content relative z-30 text-center max-w-[800px] px-4">
+    <h1
+      class="text-4xl md:text-7xl leading-[1.1] mb-6 drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] animate-[fadeUp_0.8s_ease_forwards] opacity-0 translate-y-8"
+    >
+      Překonej <span class="text-primary block md:inline">Svoje Limity</span>
+    </h1>
+    <p
+      class="text-xl md:text-2xl text-gray-200 mb-10 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] animate-[fadeUp_0.8s_ease_forwards_0.2s] opacity-0 translate-y-8"
+    >
+      Nejmodernější fitness centrum ve městě. Připoj se k elitě.
+    </p>
+    <div
+      class="buttons flex flex-col md:flex-row gap-6 justify-center animate-[fadeUp_0.8s_ease_forwards_0.4s] opacity-0 translate-y-8"
+    >
+      <a
+        href="#pricing"
+        class="btn btn-primary inline-block px-10 py-4 font-bold uppercase tracking-wider rounded-full relative overflow-hidden transition-all duration-300 z-10 bg-primary text-bg border-2 border-primary hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,242,234,0.2)] before:content-[''] before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-white/10 before:transition-[width] before:duration-300 before:-z-10 hover:before:w-full"
+      >
+        Začni teď
+      </a>
+      <a
+        href="#about"
+        class="btn btn-secondary inline-block px-10 py-4 font-bold uppercase tracking-wider rounded-full relative overflow-hidden transition-all duration-300 z-10 bg-transparent text-white border-2 border-white hover:border-primary hover:text-primary hover:-translate-y-1 hover:before:w-full before:content-[''] before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-white/10 before:transition-[width] before:duration-300 before:-z-10"
+      >
+        Více informací
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+  const intervalTime = 5000;
+
+  function nextSlide() {
+    // Tailwind class manipulation for active state
+    slides[currentSlide].classList.remove("opacity-100", "scale-105", "z-20");
+    slides[currentSlide].classList.add("opacity-0", "scale-100", "z-10");
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.remove("opacity-0", "scale-100", "z-10");
+    slides[currentSlide].classList.add("opacity-100", "scale-105", "z-20");
+  }
+
+  // Initialize first slide
+  if (slides.length > 0) {
+    slides[0].classList.add("opacity-100", "scale-105", "z-20");
+    slides[0].classList.remove("opacity-0", "scale-100", "z-10");
+  }
+
+  setInterval(nextSlide, intervalTime);
+</script>
+
+<style>
+  /* Custom Keyframe for Tailwind */
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

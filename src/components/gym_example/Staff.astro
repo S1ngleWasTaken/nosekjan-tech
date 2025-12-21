@@ -1,0 +1,130 @@
+---
+import Image from "astro/components/Image.astro";
+import trainer1 from "../../assets/gym_example/trainer-1.png";
+import trainer2 from "../../assets/gym_example/trainer-2.png";
+import trainer3 from "../../assets/gym_example/trainer-3.png";
+---
+
+<section id="staff" class="py-20">
+  <div class="container mx-auto px-6">
+    <h4
+      class="text-center text-primary text-sm tracking-[0.1em] uppercase font-semibold mb-2"
+    >
+      Náš Tým
+    </h4>
+    <h2 class="text-center text-3xl md:text-5xl font-extrabold uppercase mb-16">
+      Seznam se s <span class="text-primary">Profesionály</span>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div
+        class="staff-card bg-surface rounded-3xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
+      >
+        <div
+          class="image-box relative h-[400px] bg-neutral-800 overflow-hidden"
+        >
+          <Image
+            src={trainer1}
+            alt="Jakub - Trenér"
+            class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          />
+          <div
+            class="socials absolute bottom-[-60px] left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent flex justify-center gap-4 transition-all duration-300 group-hover:bottom-0"
+          >
+            <a
+              href="#"
+              class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors"
+              >IG</a
+            >
+            <a
+              href="#"
+              class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors"
+              >FB</a
+            >
+          </div>
+        </div>
+        <div class="info p-6 text-center">
+          <h3 class="text-2xl font-bold mb-2 text-white">Jakub Novák</h3>
+          <span
+            class="block text-primary text-sm uppercase tracking-wider mb-4 font-semibold"
+            >Hlavní Trenér & Crossfit</span
+          >
+          <p class="text-text-muted text-sm leading-relaxed">
+            Milovník funkčního tréningu, který tě dostane do životní formy.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="staff-card bg-surface rounded-3xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
+      >
+        <div
+          class="image-box relative h-[400px] bg-neutral-800 overflow-hidden"
+        >
+          <Image
+            src={trainer2}
+            alt="Eva - Trenérka"
+            class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          />
+          <div
+            class="socials absolute bottom-[-60px] left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent flex justify-center gap-4 transition-all duration-300 group-hover:bottom-0"
+          >
+            <a
+              href="#"
+              class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors"
+              >IG</a
+            >
+            <a
+              href="#"
+              class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors"
+              >Tt</a
+            >
+          </div>
+        </div>
+        <div class="info p-6 text-center">
+          <h3 class="text-2xl font-bold mb-2 text-white">Eva Svobodová</h3>
+          <span
+            class="block text-primary text-sm uppercase tracking-wider mb-4 font-semibold"
+            >HIIT & Kardio</span
+          >
+          <p class="text-text-muted text-sm leading-relaxed">
+            Energie, která tě nenechá vydechnout. Specialistka na redukci váhy.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="staff-card bg-surface rounded-3xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
+      >
+        <div
+          class="image-box relative h-[400px] bg-neutral-800 overflow-hidden"
+        >
+          <Image
+            src={trainer3}
+            alt="Tomáš - Trenér"
+            class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          />
+          <div
+            class="socials absolute bottom-[-60px] left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent flex justify-center gap-4 transition-all duration-300 group-hover:bottom-0"
+          >
+            <a
+              href="#"
+              class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors"
+              >IG</a
+            >
+          </div>
+        </div>
+        <div class="info p-6 text-center">
+          <h3 class="text-2xl font-bold mb-2 text-white">Tomáš Dvořák</h3>
+          <span
+            class="block text-primary text-sm uppercase tracking-wider mb-4 font-semibold"
+            >Jóga & Mobilita</span
+          >
+          <p class="text-text-muted text-sm leading-relaxed">
+            Harmonie těla a mysli. Pomůže ti se správným držením těla.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
