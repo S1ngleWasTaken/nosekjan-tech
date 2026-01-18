@@ -1,8 +1,9 @@
 ---
 import { translations } from "../../i18n/habitcommit";
 
-const { lang } = Astro.props;
-const t = translations[lang as keyof typeof translations].privacy;
+const { lang: propLang } = Astro.props;
+const lang = (propLang === "cs" ? "cs" : "en") as keyof typeof translations;
+const t = translations[lang]?.privacy || translations.en.privacy;
 ---
 
 <section id="privacy" class="py-20">
@@ -31,26 +32,24 @@ const t = translations[lang as keyof typeof translations].privacy;
         <div class="mt-8 pt-6 border-t border-gray-700 text-sm text-gray-500">
           {t.lastUpdated}
         </div>
-        
       </div>
     </div>
     <!-- Jazykový přepínač / Language Switcher -->
     <div class="flex justify-center gap-6 mt-8">
       <a
         href="?lang=cs"
-        class={`text-4xl hover:scale-110 transition-transform cursor-pointer ${lang === 'cs' ? 'opacity-100' : 'opacity-50'}`}
+        class={`text-4xl hover:scale-110 transition-transform cursor-pointer ${lang === "cs" ? "opacity-100" : "opacity-50"}`}
         aria-label="Česky"
       >
         🇨🇿
       </a>
       <a
         href="?lang=en"
-        class={`text-4xl hover:scale-110 transition-transform cursor-pointer ${lang === 'en' ? 'opacity-100' : 'opacity-50'}`}
+        class={`text-4xl hover:scale-110 transition-transform cursor-pointer ${lang === "en" ? "opacity-100" : "opacity-50"}`}
         aria-label="English"
       >
         🇬🇧
       </a>
     </div>
-
   </div>
 </section>

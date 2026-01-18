@@ -14,8 +14,9 @@ import enSettings from "../../assets/habitcommit/engScreenshots/settings.png";
 import enStats from "../../assets/habitcommit/engScreenshots/stats_page.png";
 import enHomeWidgets from "../../assets/habitcommit/engScreenshots/homescreen_widgets.png";
 
-const { lang } = Astro.props;
-const t = translations[lang as keyof typeof translations].hero;
+const { lang: propLang } = Astro.props;
+const lang = (propLang === "cs" ? "cs" : "en") as keyof typeof translations;
+const t = translations[lang]?.hero || translations.en.hero;
 
 const images = {
   cs: {
@@ -32,7 +33,7 @@ const images = {
   },
 };
 
-const currentImages = images[lang as keyof typeof images] || images.en;
+const currentImages = images[lang] || images.en;
 ---
 
 <section id="hero" class="relative py-20 lg:py-32 overflow-hidden">
@@ -73,7 +74,7 @@ const currentImages = images[lang as keyof typeof images] || images.en;
             class="rounded-[2.5rem] shadow-2xl border-4 border-gray-800 mx-auto w-64 md:w-full max-w-[280px]"
           />
         </div> -->
-         <div
+        <div
           class="transform md:translate-y-12 transition-transform duration-500 hover:-translate-y-2"
         >
           <Image
@@ -100,7 +101,6 @@ const currentImages = images[lang as keyof typeof images] || images.en;
             class="rounded-[2.5rem] shadow-2xl border-4 border-gray-800 mx-auto w-64 md:w-full max-w-[280px]"
           />
         </div>
-       
       </div>
     </div>
   </div>

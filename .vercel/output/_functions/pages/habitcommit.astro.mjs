@@ -312,8 +312,9 @@ const $$Astro$4 = createAstro();
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$Hero;
-  const { lang } = Astro2.props;
-  const t = translations[lang].hero;
+  const { lang: propLang } = Astro2.props;
+  const lang = propLang === "cs" ? "cs" : "en";
+  const t = translations[lang]?.hero || translations.en.hero;
   const images = {
     cs: {
       left: csSettings,
@@ -346,8 +347,9 @@ const $$Astro$3 = createAstro();
 const $$Features = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$Features;
-  const { lang } = Astro2.props;
-  const t = translations[lang].features;
+  const { lang: propLang } = Astro2.props;
+  const lang = propLang === "cs" ? "cs" : "en";
+  const t = translations[lang]?.features || translations.en.features;
   return renderTemplate`${maybeRenderHead()}<section id="features" class="py-20 bg-gray-900/50"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="text-center mb-16"> <h2 class="text-3xl md:text-4xl font-bold text-white mb-4"> ${t.title} </h2> <p class="text-gray-400 max-w-2xl mx-auto"> ${t.subtitle} </p> </div> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> ${t.list.map((feature) => renderTemplate`<div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700/50 hover:border-blue-500/30 transition-all hover:transform hover:-translate-y-1"> <div class="text-4xl mb-4">${feature.icon}</div> <h3 class="text-xl font-bold text-white mb-3">${feature.title}</h3> <p class="text-gray-400 leading-relaxed">${feature.description}</p> </div>`)} </div> </div> </section>`;
 }, "/Users/jannosek/development/websites/nosekjan-tech/src/components/habitcommit/Features.astro", void 0);
 
@@ -355,8 +357,9 @@ const $$Astro$2 = createAstro();
 const $$PrivacyPolicy = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$PrivacyPolicy;
-  const { lang } = Astro2.props;
-  const t = translations[lang].privacy;
+  const { lang: propLang } = Astro2.props;
+  const lang = propLang === "cs" ? "cs" : "en";
+  const t = translations[lang]?.privacy || translations.en.privacy;
   return renderTemplate`${maybeRenderHead()}<section id="privacy" class="py-20"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-300"> <!-- Header --> <div class="mb-12 text-center"> <h2 class="text-3xl font-bold text-white mb-4">${t.title}</h2> <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div> </div> <div class="prose prose-invert prose-lg mx-auto bg-gray-900/40 p-8 rounded-2xl border border-gray-800"> <div> ${t.sections.map((section, index) => renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate` <h3${addAttribute(`text-white ${index > 0 ? "mt-8" : ""}`, "class")}> ${section.title} </h3> <div>${unescapeHTML(section.content)}</div> ` })}`)} <div class="mt-8 pt-6 border-t border-gray-700 text-sm text-gray-500"> ${t.lastUpdated} </div> </div> </div> <!-- Jazykový přepínač / Language Switcher --> <div class="flex justify-center gap-6 mt-8"> <a href="?lang=cs"${addAttribute(`text-4xl hover:scale-110 transition-transform cursor-pointer ${lang === "cs" ? "opacity-100" : "opacity-50"}`, "class")} aria-label="Česky">
 🇨🇿
 </a> <a href="?lang=en"${addAttribute(`text-4xl hover:scale-110 transition-transform cursor-pointer ${lang === "en" ? "opacity-100" : "opacity-50"}`, "class")} aria-label="English">
@@ -368,8 +371,9 @@ const $$Astro$1 = createAstro();
 const $$Support = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Support;
-  const { lang } = Astro2.props;
-  const t = translations[lang].support;
+  const { lang: propLang } = Astro2.props;
+  const lang = propLang === "cs" ? "cs" : "en";
+  const t = translations[lang]?.support || translations.en.support;
   return renderTemplate`${maybeRenderHead()}<section id="support" class="py-20 bg-gray-900/20"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <h2 class="text-3xl font-bold text-white mb-6">${t.title}</h2> <p class="text-xl text-gray-300 mb-10"> ${t.subtitle} </p> <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 max-w-xl mx-auto hover:border-blue-500/50 transition-colors shadow-lg"> <div class="text-5xl mb-6">📬</div> <h3 class="text-xl font-semibold text-white mb-2">${t.boxTitle}</h3> <p class="text-gray-400 mb-6"> ${t.boxText} </p> <a href="mailto:honzik.nosek22@gmail.com?subject=HabitCommit%20Support" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40">
 honzik.nosek22@gmail.com
 </a> </div> <div class="mt-16 text-gray-500 text-sm"> <p>

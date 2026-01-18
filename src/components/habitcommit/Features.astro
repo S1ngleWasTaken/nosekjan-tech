@@ -1,8 +1,9 @@
 ---
 import { translations } from "../../i18n/habitcommit";
 
-const { lang } = Astro.props;
-const t = translations[lang as keyof typeof translations].features;
+const { lang: propLang } = Astro.props;
+const lang = (propLang === "cs" ? "cs" : "en") as keyof typeof translations;
+const t = translations[lang]?.features || translations.en.features;
 ---
 
 <section id="features" class="py-20 bg-gray-900/50">

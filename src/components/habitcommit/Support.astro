@@ -1,8 +1,9 @@
 ---
 import { translations } from "../../i18n/habitcommit";
 
-const { lang } = Astro.props;
-const t = translations[lang as keyof typeof translations].support;
+const { lang: propLang } = Astro.props;
+const lang = (propLang === "cs" ? "cs" : "en") as keyof typeof translations;
+const t = translations[lang]?.support || translations.en.support;
 ---
 
 <section id="support" class="py-20 bg-gray-900/20">
@@ -30,7 +31,8 @@ const t = translations[lang as keyof typeof translations].support;
 
     <div class="mt-16 text-gray-500 text-sm">
       <p>
-        &copy; {new Date().getFullYear()} {t.copyright}
+        &copy; {new Date().getFullYear()}
+        {t.copyright}
       </p>
     </div>
   </div>
