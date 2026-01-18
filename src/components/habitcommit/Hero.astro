@@ -1,8 +1,38 @@
 ---
+import { translations } from "../../i18n/habitcommit";
 import { Image } from "astro:assets";
-import dashboardImg from "../../assets/habitcommit/dashboard.webp";
-import addHabitImg from "../../assets/habitcommit/add_habit.webp";
-import statsImg from "../../assets/habitcommit/stats.webp";
+
+// CS Imports
+import csHabits from "../../assets/habitcommit/csScreenshots/habits_page.png";
+import csSettings from "../../assets/habitcommit/csScreenshots/settings.png";
+import csStats from "../../assets/habitcommit/csScreenshots/stats_page.png";
+import csHomeWidgets from "../../assets/habitcommit/csScreenshots/homescreen_widgets.png";
+
+// EN Imports
+import enHabits from "../../assets/habitcommit/engScreenshots/habits_page.png";
+import enSettings from "../../assets/habitcommit/engScreenshots/settings.png";
+import enStats from "../../assets/habitcommit/engScreenshots/stats_page.png";
+import enHomeWidgets from "../../assets/habitcommit/engScreenshots/homescreen_widgets.png";
+
+const { lang } = Astro.props;
+const t = translations[lang as keyof typeof translations].hero;
+
+const images = {
+  cs: {
+    left: csSettings,
+    center: csHabits,
+    right: csStats,
+    homescreen: csHomeWidgets,
+  },
+  en: {
+    left: enSettings,
+    center: enHabits,
+    right: enStats,
+    homescreen: enHomeWidgets,
+  },
+};
+
+const currentImages = images[lang as keyof typeof images] || images.en;
 ---
 
 <section id="hero" class="relative py-20 lg:py-32 overflow-hidden">
@@ -14,33 +44,41 @@ import statsImg from "../../assets/habitcommit/stats.webp";
       <p
         class="text-xl md:text-2xl text-gray-300 font-light mb-10 leading-relaxed"
       >
-        Budujte návyky, které vydrží. Sledujte svůj pokrok, analyzujte data a
-        dosahujte svých cílů s elegancí.
+        {t.subtitle}
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="#features"
           class="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-all shadow-lg hover:shadow-blue-500/30"
         >
-          Prozkoumat funkce
+          {t.explore}
         </a>
         <a
           href="#support"
           class="px-8 py-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white font-medium border border-gray-700 transition-all"
         >
-          Kontaktovat podporu
+          {t.contact}
         </a>
       </div>
     </div>
 
     <div class="relative mx-auto mt-16 max-w-5xl">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-        <div
+        <!-- <div
           class="transform md:translate-y-12 transition-transform duration-500 hover:-translate-y-2"
         >
           <Image
-            src={addHabitImg}
-            alt="Přidat nový návyk"
+            src={currentImages.left}
+            alt={t.alt.add}
+            class="rounded-[2.5rem] shadow-2xl border-4 border-gray-800 mx-auto w-64 md:w-full max-w-[280px]"
+          />
+        </div> -->
+         <div
+          class="transform md:translate-y-12 transition-transform duration-500 hover:-translate-y-2"
+        >
+          <Image
+            src={currentImages.homescreen}
+            alt={t.alt.stats}
             class="rounded-[2.5rem] shadow-2xl border-4 border-gray-800 mx-auto w-64 md:w-full max-w-[280px]"
           />
         </div>
@@ -48,8 +86,8 @@ import statsImg from "../../assets/habitcommit/stats.webp";
           class="z-10 transform scale-110 transition-transform duration-500 hover:scale-115"
         >
           <Image
-            src={dashboardImg}
-            alt="Hlavní dashboard"
+            src={currentImages.center}
+            alt={t.alt.dashboard}
             class="rounded-[2.5rem] shadow-2xl shadow-blue-500/20 border-4 border-gray-800 mx-auto w-64 md:w-full max-w-[280px]"
           />
         </div>
@@ -57,11 +95,12 @@ import statsImg from "../../assets/habitcommit/stats.webp";
           class="transform md:translate-y-12 transition-transform duration-500 hover:-translate-y-2"
         >
           <Image
-            src={statsImg}
-            alt="Detailní statistiky"
+            src={currentImages.right}
+            alt={t.alt.stats}
             class="rounded-[2.5rem] shadow-2xl border-4 border-gray-800 mx-auto w-64 md:w-full max-w-[280px]"
           />
         </div>
+       
       </div>
     </div>
   </div>

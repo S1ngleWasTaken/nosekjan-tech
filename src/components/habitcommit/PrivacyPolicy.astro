@@ -1,189 +1,56 @@
 ---
+import { translations } from "../../i18n/habitcommit";
 
+const { lang } = Astro.props;
+const t = translations[lang as keyof typeof translations].privacy;
 ---
 
 <section id="privacy" class="py-20">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-300">
-    <!-- Jazykový přepínač / Language Switcher -->
-    <div class="flex justify-center gap-6 mb-8">
-      <button
-        id="btn-cz"
-        class="text-4xl hover:scale-110 transition-transform cursor-pointer opacity-100"
-        aria-label="Česky"
-      >
-        🇨🇿
-      </button>
-      <button
-        id="btn-en"
-        class="text-4xl hover:scale-110 transition-transform cursor-pointer opacity-50"
-        aria-label="English"
-      >
-        🇬🇧
-      </button>
-    </div>
-
-    <!-- CZ Header -->
-    <div id="header-cz" class="mb-12 text-center">
-      <h2 class="text-3xl font-bold text-white mb-4">Ochrana soukromí</h2>
-      <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
-    </div>
-
-    <!-- EN Header -->
-    <div id="header-en" class="mb-12 text-center hidden">
-      <h2 class="text-3xl font-bold text-white mb-4">Privacy Policy</h2>
+    <!-- Header -->
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">{t.title}</h2>
       <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
     </div>
 
     <div
       class="prose prose-invert prose-lg mx-auto bg-gray-900/40 p-8 rounded-2xl border border-gray-800"
     >
-      <!-- CZ Content -->
-      <div id="content-cz">
-        <h3 class="text-white">Úvod</h3>
-        <p>
-          Aplikace HabitCommit respektuje vaše soukromí. Tento dokument
-          popisuje, jak nakládáme s vašimi daty.
-        </p>
-
-        <h3 class="text-white mt-8">Sběr a použití dat</h3>
-        <p>
-          Aplikace <strong>nesbírá</strong> žádná osobní data, která by vás mohla
-          identifikovat. Veškerá data o vašich návycích jsou uložena <strong
-            >lokálně</strong
-          > ve vašem zařízení.
-        </p>
-        <p>
-          Upozorňujeme, že pokud máte zapnuté zálohování zařízení na iCloud,
-          data aplikace mohou být součástí této zálohy spravované společností
-          Apple.
-        </p>
-        <p>
-          Svá data můžete kdykoliv smazat odinstalováním aplikace ze svého
-          zařízení.
-        </p>
-        <p>
-          Aplikace nepoužívá žádné analytické nástroje třetích stran, které by
-          sledovaly vaši aktivitu napříč aplikacemi a webovými stránkami.
-        </p>
-
-        <h3 class="text-white mt-8">Oprávnění</h3>
-        <p>
-          Aplikace může vyžadovat následující oprávnění pro správné fungování:
-        </p>
-        <ul class="list-disc pl-5 space-y-2">
-          <li>
-            <strong>Notifikace:</strong> Pro zasílání upozornění na vaše návyky (pokud
-            je povolíte).
-          </li>
-        </ul>
-
-        <h3 class="text-white mt-8">Kontakt</h3>
-        <p>
-          Máte-li jakékoli dotazy ohledně ochrany soukromí, kontaktujte nás na
-          emailu <a
-            href="mailto:honzik.nosek22@gmail.com"
-            class="text-blue-400 hover:text-blue-300 underline"
-            >honzik.nosek22@gmail.com</a
-          >.
-        </p>
+      <div>
+        {
+          t.sections.map((section, index) => (
+            <>
+              <h3 class={`text-white ${index > 0 ? "mt-8" : ""}`}>
+                {section.title}
+              </h3>
+              <div set:html={section.content} />
+            </>
+          ))
+        }
 
         <div class="mt-8 pt-6 border-t border-gray-700 text-sm text-gray-500">
-          Poslední aktualizace: 20. prosince 2025
+          {t.lastUpdated}
         </div>
-      </div>
-
-      <!-- EN Content -->
-      <div id="content-en" class="hidden">
-        <h3 class="text-white">Introduction</h3>
-        <p>
-          HabitCommit respects your privacy. This document describes how we
-          handle your data.
-        </p>
-
-        <h3 class="text-white mt-8">Data Collection and Usage</h3>
-        <p>
-          The application <strong>does not collect</strong> any personal data that
-          could identify you. All habit data is stored <strong>locally</strong> on
-          your device.
-        </p>
-        <p>
-          Please note that if you have iCloud backup enabled, application data
-          may be included in this backup managed by Apple.
-        </p>
-        <p>
-          You can delete your data at any time by uninstalling the application
-          from your device.
-        </p>
-        <p>
-          The application does not use any third-party analytics tools that
-          would track your activity across applications and websites.
-        </p>
-
-        <h3 class="text-white mt-8">Permissions</h3>
-        <p>
-          The application may require the following permissions to function
-          correctly:
-        </p>
-        <ul class="list-disc pl-5 space-y-2">
-          <li>
-            <strong>Notifications:</strong> To send you reminders about your habits
-            (if you enable them).
-          </li>
-        </ul>
-
-        <h3 class="text-white mt-8">Contact</h3>
-        <p>
-          If you have any questions regarding privacy, please contact us at
-          <a
-            href="mailto:honzik.nosek22@gmail.com"
-            class="text-blue-400 hover:text-blue-300 underline"
-            >honzik.nosek22@gmail.com</a
-          >.
-        </p>
-
-        <div class="mt-8 pt-6 border-t border-gray-700 text-sm text-gray-500">
-          Last updated: December 20, 2025
-        </div>
+        
       </div>
     </div>
+    <!-- Jazykový přepínač / Language Switcher -->
+    <div class="flex justify-center gap-6 mt-8">
+      <a
+        href="?lang=cs"
+        class={`text-4xl hover:scale-110 transition-transform cursor-pointer ${lang === 'cs' ? 'opacity-100' : 'opacity-50'}`}
+        aria-label="Česky"
+      >
+        🇨🇿
+      </a>
+      <a
+        href="?lang=en"
+        class={`text-4xl hover:scale-110 transition-transform cursor-pointer ${lang === 'en' ? 'opacity-100' : 'opacity-50'}`}
+        aria-label="English"
+      >
+        🇬🇧
+      </a>
+    </div>
+
   </div>
 </section>
-
-<script lang="ts">
-  const btnCz = document.getElementById("btn-cz");
-  const btnEn = document.getElementById("btn-en");
-  const headerCz = document.getElementById("header-cz");
-  const headerEn = document.getElementById("header-en");
-  const contentCz = document.getElementById("content-cz");
-  const contentEn = document.getElementById("content-en");
-
-  /**
-   * @param {string} lang
-   */
-  function setLanguage(lang) {
-    if (lang === "cz") {
-      headerCz?.classList.remove("hidden");
-      headerEn?.classList.add("hidden");
-      contentCz?.classList.remove("hidden");
-      contentEn?.classList.add("hidden");
-
-      btnCz?.classList.remove("opacity-50");
-      btnCz?.classList.add("opacity-100");
-      btnEn?.classList.remove("opacity-100");
-      btnEn?.classList.add("opacity-50");
-    } else {
-      headerCz?.classList.add("hidden");
-      headerEn?.classList.remove("hidden");
-      contentCz?.classList.add("hidden");
-      contentEn?.classList.remove("hidden");
-
-      btnCz?.classList.remove("opacity-100");
-      btnCz?.classList.add("opacity-50");
-      btnEn?.classList.remove("opacity-50");
-      btnEn?.classList.add("opacity-100");
-    }
-  }
-
-  btnCz?.addEventListener("click", () => setLanguage("cz"));
-  btnEn?.addEventListener("click", () => setLanguage("en"));
-</script>
