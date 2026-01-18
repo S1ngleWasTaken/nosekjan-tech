@@ -163,7 +163,7 @@ const bicarLogo = new Proxy({"src":"/_astro/Bicar logo.ClhyLuoO.webp","width":82
 						}
 					});
 
-const habitCommitIcon = new Proxy({"src":"/_astro/HabitCommit_icon.BCqcCaNQ.webp","width":256,"height":256,"format":"webp"}, {
+const habitCommitIcon = new Proxy({"src":"/_astro/HabitCommit_icon.BeQ55k8b.webp","width":1024,"height":1024,"format":"webp"}, {
 						get(target, name, receiver) {
 							if (name === 'clone') {
 								return structuredClone(target);
