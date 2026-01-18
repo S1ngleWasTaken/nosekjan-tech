@@ -1,0 +1,189 @@
+import { c as createComponent, m as maybeRenderHead, r as renderScript, a as renderTemplate, b as addAttribute, d as renderComponent, e as createAstro, f as renderHead, g as renderSlot } from '../chunks/astro/server_DkGOH_c7.mjs';
+import 'piccolore';
+import 'clsx';
+import { a as getImage, $ as $$Image } from '../chunks/_astro_assets_BGxsPAK9.mjs';
+/* empty css                               */
+export { renderers } from '../renderers.mjs';
+
+const $$Navbar = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<header id="navbar" class="fixed top-0 left-0 w-full z-50 py-6 transition-all duration-300 bg-transparent"> <div class="container mx-auto px-6 flex justify-between items-center"> <a href="#" class="text-2xl font-extrabold tracking-tight text-text z-[1001]">NEON<span class="text-primary">GYM</span></a> <button id="menu-toggle" aria-label="Menu" class="md:hidden flex flex-col gap-[6px] z-[1001] bg-none border-none cursor-pointer"> <span class="bar w-[25px] h-[2px] bg-white transition-all duration-300"></span> <span class="bar w-[25px] h-[2px] bg-white transition-all duration-300"></span> <span class="bar w-[25px] h-[2px] bg-white transition-all duration-300"></span> </button> <nav id="nav-menu" class="fixed top-0 right-[-100%] w-full h-screen bg-bg flex justify-center items-center transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] md:static md:w-auto md:h-auto md:bg-transparent md:flex-row md:justify-end md:right-0"> <ul class="flex flex-col text-center gap-12 md:flex-row md:gap-8 list-none m-0 p-0"> <li><a href="#hero" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Domů</a></li> <li><a href="#about" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">O nás</a></li> <li><a href="#pricing" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Ceník</a></li> <li><a href="#gallery" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Galerie</a></li> <li><a href="#staff" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Trenéři</a></li> <li><a href="#contact" class="font-semibold text-2xl md:text-sm uppercase tracking-wider relative hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-[width] after:duration-300 hover:after:w-full">Kontakt</a></li> </ul> </nav> </div> </header> ${renderScript($$result, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Navbar.astro?astro&type=script&index=0&lang.ts")}`;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Navbar.astro", void 0);
+
+const hero1 = new Proxy({"src":"/_astro/hero-1.7_6ksH4Q.png","width":1024,"height":1024,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/Users/jannosek/development/websites/nosekjan-tech/src/assets/gym_example/hero-1.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const hero2 = new Proxy({"src":"/_astro/hero-2.C38zOrr5.png","width":1024,"height":1024,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/Users/jannosek/development/websites/nosekjan-tech/src/assets/gym_example/hero-2.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const hero3 = new Proxy({"src":"/_astro/hero-3.DGrICmcU.png","width":1024,"height":1024,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/Users/jannosek/development/websites/nosekjan-tech/src/assets/gym_example/hero-3.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const $$Hero = createComponent(async ($$result, $$props, $$slots) => {
+  const hero1Opt = await getImage({ src: hero1, format: "webp" });
+  const hero2Opt = await getImage({ src: hero2, format: "webp" });
+  const hero3Opt = await getImage({ src: hero3, format: "webp" });
+  return renderTemplate`${maybeRenderHead()}<section id="hero" class="relative h-screen w-full flex items-center justify-center overflow-hidden p-0" data-astro-cid-j7gdhfve> <div class="slider absolute top-0 left-0 w-full h-full z-10" data-astro-cid-j7gdhfve> <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-[1500ms] ease-in-out transform scale-100 transition-transform duration-[6000ms] ease-linear active:opacity-100 active:scale-105"${addAttribute(`background-image: url('${hero1Opt.src}')`, "style")} data-astro-cid-j7gdhfve></div> <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-[1500ms] ease-in-out transform scale-100 transition-transform duration-[6000ms] ease-linear"${addAttribute(`background-image: url('${hero2Opt.src}')`, "style")} data-astro-cid-j7gdhfve></div> <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-[1500ms] ease-in-out transform scale-100 transition-transform duration-[6000ms] ease-linear"${addAttribute(`background-image: url('${hero3Opt.src}')`, "style")} data-astro-cid-j7gdhfve></div> </div> <div class="overlay absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 to-black/80 z-20" data-astro-cid-j7gdhfve></div> <div class="content relative z-30 text-center max-w-[800px] px-4" data-astro-cid-j7gdhfve> <h1 class="text-4xl md:text-7xl leading-[1.1] mb-6 drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] animate-[fadeUp_0.8s_ease_forwards] opacity-0 translate-y-8" data-astro-cid-j7gdhfve>
+Překonej <span class="text-primary block md:inline" data-astro-cid-j7gdhfve>Svoje Limity</span> </h1> <p class="text-xl md:text-2xl text-gray-200 mb-10 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] animate-[fadeUp_0.8s_ease_forwards_0.2s] opacity-0 translate-y-8" data-astro-cid-j7gdhfve>
+Nejmodernější fitness centrum ve městě. Připoj se k elitě.
+</p> <div class="buttons flex flex-col md:flex-row gap-6 justify-center animate-[fadeUp_0.8s_ease_forwards_0.4s] opacity-0 translate-y-8" data-astro-cid-j7gdhfve> <a href="#pricing" class="btn btn-primary inline-block px-10 py-4 font-bold uppercase tracking-wider rounded-full relative overflow-hidden transition-all duration-300 z-10 bg-primary text-bg border-2 border-primary hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,242,234,0.2)] before:content-[''] before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-white/10 before:transition-[width] before:duration-300 before:-z-10 hover:before:w-full" data-astro-cid-j7gdhfve>
+Začni teď
+</a> <a href="#about" class="btn btn-secondary inline-block px-10 py-4 font-bold uppercase tracking-wider rounded-full relative overflow-hidden transition-all duration-300 z-10 bg-transparent text-white border-2 border-white hover:border-primary hover:text-primary hover:-translate-y-1 hover:before:w-full before:content-[''] before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-white/10 before:transition-[width] before:duration-300 before:-z-10" data-astro-cid-j7gdhfve>
+Více informací
+</a> </div> </div> </section> ${renderScript($$result, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Hero.astro?astro&type=script&index=0&lang.ts")} `;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Hero.astro", void 0);
+
+const about = new Proxy({"src":"/_astro/about.CAkJZsdh.png","width":1024,"height":1024,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/Users/jannosek/development/websites/nosekjan-tech/src/assets/gym_example/about.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const $$About = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section id="about" class="py-20"> <div class="container mx-auto px-6"> <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center"> <div class="image-wrapper relative rounded-2xl overflow-hidden group order-2 md:order-1"> ${renderComponent($$result, "Image", $$Image, { "src": about, "alt": "Tren\xE9r pom\xE1h\xE1 klientovi", "class": "w-full h-auto rounded-2xl transition-transform duration-500 ease-out group-hover:scale-105 block" })} <div class="experience-badge absolute bottom-5 right-5 bg-surface p-6 rounded-2xl border border-white/10 text-center shadow-xl z-10"> <span class="block text-4xl md:text-5xl font-extrabold text-primary leading-none">10+</span> <span class="text-xs md:text-sm uppercase tracking-wider text-text">Let Zkušeností</span> </div> </div> <div class="content order-1 md:order-2"> <h4 class="text-primary text-sm tracking-[0.1em] mb-2 uppercase font-semibold">
+Kdo Jsme
+</h4> <h2 class="text-3xl md:text-5xl font-extrabold uppercase mb-6 leading-tight">
+Víc Než Jen <span class="text-primary">Fitness</span> </h2> <p class="text-text-muted leading-relaxed mb-8">
+V Neon Gym věříme, že fitness není jen o zvedání činek, ale o celkovém
+          životním stylu. Vybudovali jsme prostor, kde se motivace potkává s
+          nejmodernější technologií.
+</p> <ul class="space-y-6 mb-8"> <li class="flex items-start gap-4"> <span class="flex items-center justify-center min-w-[50px] h-[50px] bg-primary/20 rounded-full text-2xl text-primary">💪</span> <div class="text"> <strong class="block text-lg font-bold text-white">Špičkové Vybavení</strong> <small class="text-text-muted text-sm">Technogym & Rogue fitness stroje</small> </div> </li> <li class="flex items-start gap-4"> <span class="flex items-center justify-center min-w-[50px] h-[50px] bg-primary/20 rounded-full text-2xl text-primary">🧘</span> <div class="text"> <strong class="block text-lg font-bold text-white">Wellness Zóna</strong> <small class="text-text-muted text-sm">Sauna, pára a relaxační místnost</small> </div> </li> <li class="flex items-start gap-4"> <span class="flex items-center justify-center min-w-[50px] h-[50px] bg-primary/20 rounded-full text-2xl text-primary">🏆</span> <div class="text"> <strong class="block text-lg font-bold text-white">Profesionální Tým</strong> <small class="text-text-muted text-sm">Certifikovaní trenéři pro váš progres</small> </div> </li> </ul> <a href="#contact" class="inline-block font-bold uppercase border-b-2 border-secondary pb-1 text-white hover:text-primary transition-colors">Poznej Náš Tým &rarr;</a> </div> </div> </div> </section>`;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/About.astro", void 0);
+
+const $$Pricing = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section id="pricing" class="py-20"> <div class="container mx-auto px-6"> <div class="text-center mb-16"> <h4 class="text-secondary text-sm tracking-[0.1em] uppercase font-semibold mb-2">Členství</h4> <h2 class="text-3xl md:text-5xl font-extrabold uppercase">Vyber Si Svůj <span class="text-secondary">Plán</span></h2> </div> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center"> <!-- Card 1 --> <div class="bg-surface p-8 md:p-12 rounded-3xl border border-white/5 text-center transition-all duration-300 hover:-translate-y-2 hover:border-secondary group"> <h3 class="text-2xl font-bold mb-4">Jednorázové</h3> <div class="text-5xl font-extrabold my-6 text-white group-hover:text-secondary transition-colors">190 Kč<span class="text-base text-text-muted font-normal block mt-1">/vstup</span></div> <p class="text-text-muted mb-6">Pro občasné návštěvníky</p> <ul class="text-left space-y-4 mb-8 text-gray-300"> <li>✅ Vstup do posilovny</li> <li>✅ Šatna a sprchy</li> <li class="opacity-50">❌ Wellness zóna</li> <li class="opacity-50">❌ Osobní trenér</li> </ul> <a href="#contact" class="block w-full py-4 rounded-xl border border-white/20 font-semibold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300">Koupit na Recepci</a> </div> <!-- Card 2 (Popular) --> <div class="bg-surface p-8 md:p-12 rounded-3xl text-center relative transform lg:scale-105 z-10 border border-primary shadow-[0_0_30px_rgba(0,242,234,0.1)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,242,234,0.2)] hover:-translate-y-2"> <div class="absolute -top-[15px] left-1/2 -translate-x-1/2 bg-primary text-bg px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Nejoblíbenější</div> <h3 class="text-2xl font-bold mb-4">Měsíční</h3> <div class="text-5xl font-extrabold my-6 text-primary">990 Kč<span class="text-base text-text-muted font-normal block mt-1">/měsíc</span></div> <p class="text-text-muted mb-6">Nejlepší poměr cena/výkon</p> <ul class="text-left space-y-4 mb-8 text-white"> <li>✅ Neomezený vstup</li> <li>✅ Wellness zóna (2x týdně)</li> <li>✅ Úvodní lekce zdarma</li> <li class="opacity-50">❌ Osobní trenér</li> </ul> <a href="#contact" class="block w-full py-4 rounded-xl bg-primary text-bg font-bold uppercase tracking-wider hover:bg-secondary transition-colors duration-300 border-none">Chci Členství</a> </div> <!-- Card 3 --> <div class="bg-surface p-8 md:p-12 rounded-3xl border border-white/5 text-center transition-all duration-300 hover:-translate-y-2 hover:border-secondary group"> <h3 class="text-2xl font-bold mb-4">VIP Roční</h3> <div class="text-5xl font-extrabold my-6 text-white group-hover:text-secondary transition-colors">8 900 Kč<span class="text-base text-text-muted font-normal block mt-1">/rok</span></div> <p class="text-text-muted mb-6">Pro ty, co to myslí vážně</p> <ul class="text-left space-y-4 mb-8 text-gray-300"> <li>✅ All inclusive přístup</li> <li>✅ Neomezené wellness</li> <li>✅ 1x měsíčně konzultace</li> <li>✅ Parkování zdarma</li> </ul> <a href="#contact" class="block w-full py-4 rounded-xl border border-white/20 font-semibold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300">Chci Členství</a> </div> </div> </div> </section>`;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Pricing.astro", void 0);
+
+const trainer1 = new Proxy({"src":"/_astro/trainer-1.CQIFkdM7.png","width":1024,"height":1024,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/Users/jannosek/development/websites/nosekjan-tech/src/assets/gym_example/trainer-1.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const trainer2 = new Proxy({"src":"/_astro/trainer-2.BBf_X5Qs.png","width":1024,"height":1024,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/Users/jannosek/development/websites/nosekjan-tech/src/assets/gym_example/trainer-2.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const $$Gallery = createComponent(($$result, $$props, $$slots) => {
+  const images = [hero1, hero2, hero3, about, trainer1, trainer2];
+  return renderTemplate`${maybeRenderHead()}<section id="gallery" class="py-20"> <div class="container mx-auto px-6"> <div class="text-center mb-12"> <h4 class="text-secondary text-sm tracking-[0.1em] uppercase font-semibold mb-2">
+Inspirace
+</h4> <h2 class="text-3xl md:text-5xl font-extrabold uppercase">
+Prohlédni si <span class="text-secondary">Prostory</span> </h2> </div> <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[250px] gap-4"> ${images.map((img, index) => renderTemplate`<a${addAttribute(img.src, "href")}${addAttribute(img.width, "data-pswp-width")}${addAttribute(img.height, "data-pswp-height")} target="_blank"${addAttribute(`relative rounded-xl overflow-hidden cursor-pointer group block ${index === 0 ? "col-span-2 row-span-2" : index === 1 ? "col-span-2" : index === 4 ? "col-span-2" : ""}`, "class")}> ${renderComponent($$result, "Image", $$Image, { "src": img, "alt": `Gym gallery ${index + 1}`, "class": "w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" })} <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"> <span class="text-white font-bold uppercase tracking-widest border border-white px-4 py-2">
+Neon Gym
+</span> </div> </a>`)} </div> </div> </section> ${renderScript($$result, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Gallery.astro?astro&type=script&index=0&lang.ts")}`;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Gallery.astro", void 0);
+
+const trainer3 = new Proxy({"src":"/_astro/trainer-1.CQIFkdM7.png","width":1024,"height":1024,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/Users/jannosek/development/websites/nosekjan-tech/src/assets/gym_example/trainer-3.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const $$Staff = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section id="staff" class="py-20"> <div class="container mx-auto px-6"> <h4 class="text-center text-primary text-sm tracking-[0.1em] uppercase font-semibold mb-2">
+Náš Tým
+</h4> <h2 class="text-center text-3xl md:text-5xl font-extrabold uppercase mb-16">
+Seznam se s <span class="text-primary">Profesionály</span> </h2> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"> <div class="staff-card bg-surface rounded-3xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300"> <div class="image-box relative h-[400px] bg-neutral-800 overflow-hidden"> ${renderComponent($$result, "Image", $$Image, { "src": trainer1, "alt": "Jakub - Tren\xE9r", "class": "w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" })} <div class="socials absolute bottom-[-60px] left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent flex justify-center gap-4 transition-all duration-300 group-hover:bottom-0"> <a href="#" class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors">IG</a> <a href="#" class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors">FB</a> </div> </div> <div class="info p-6 text-center"> <h3 class="text-2xl font-bold mb-2 text-white">Jakub Novák</h3> <span class="block text-primary text-sm uppercase tracking-wider mb-4 font-semibold">Hlavní Trenér & Crossfit</span> <p class="text-text-muted text-sm leading-relaxed">
+Milovník funkčního tréningu, který tě dostane do životní formy.
+</p> </div> </div> <div class="staff-card bg-surface rounded-3xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300"> <div class="image-box relative h-[400px] bg-neutral-800 overflow-hidden"> ${renderComponent($$result, "Image", $$Image, { "src": trainer2, "alt": "Eva - Tren\xE9rka", "class": "w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" })} <div class="socials absolute bottom-[-60px] left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent flex justify-center gap-4 transition-all duration-300 group-hover:bottom-0"> <a href="#" class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors">IG</a> <a href="#" class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors">Tt</a> </div> </div> <div class="info p-6 text-center"> <h3 class="text-2xl font-bold mb-2 text-white">Eva Svobodová</h3> <span class="block text-primary text-sm uppercase tracking-wider mb-4 font-semibold">HIIT & Kardio</span> <p class="text-text-muted text-sm leading-relaxed">
+Energie, která tě nenechá vydechnout. Specialistka na redukci váhy.
+</p> </div> </div> <div class="staff-card bg-surface rounded-3xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300"> <div class="image-box relative h-[400px] bg-neutral-800 overflow-hidden"> ${renderComponent($$result, "Image", $$Image, { "src": trainer3, "alt": "Tom\xE1\u0161 - Tren\xE9r", "class": "w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" })} <div class="socials absolute bottom-[-60px] left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent flex justify-center gap-4 transition-all duration-300 group-hover:bottom-0"> <a href="#" class="w-9 h-9 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs hover:bg-primary transition-colors">IG</a> </div> </div> <div class="info p-6 text-center"> <h3 class="text-2xl font-bold mb-2 text-white">Tomáš Dvořák</h3> <span class="block text-primary text-sm uppercase tracking-wider mb-4 font-semibold">Jóga & Mobilita</span> <p class="text-text-muted text-sm leading-relaxed">
+Harmonie těla a mysli. Pomůže ti se správným držením těla.
+</p> </div> </div> </div> </div> </section>`;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Staff.astro", void 0);
+
+const $$Contact = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section id="contact" class="py-20 bg-gradient-to-r from-bg to-neutral-900"> <div class="container mx-auto px-6"> <div class="grid grid-cols-1 md:grid-cols-2 gap-16 min-h-[500px]"> <div class="info"> <h4 class="text-primary text-sm tracking-[0.1em] uppercase font-semibold mb-2">Kontakt</h4> <h2 class="text-3xl md:text-5xl font-extrabold uppercase mb-8">Navštiv <span class="text-primary">Neon Gym</span></h2> <p class="text-text-muted leading-relaxed mb-10">Jsme tu pro tebe každý den. Zastav se na trénink nebo jen na kávu a prohlídku.</p> <div class="details my-10 space-y-4"> <div class="item flex flex-col text-lg"> <span class="label text-text-muted text-sm mb-1">Adresa:</span>
+Kanadská 6, 160 00 Praha 6
+</div> <div class="item flex flex-col text-lg"> <span class="label text-text-muted text-sm mb-1">Email:</span> <a href="mailto:info@neongym.cz" class="text-white hover:text-primary transition-colors">info@neongym.cz</a> </div> <div class="item flex flex-col text-lg"> <span class="label text-text-muted text-sm mb-1">Telefon:</span> <a href="tel:+420123456789" class="text-white hover:text-primary transition-colors">+420 123 456 789</a> </div> </div> <div class="hours bg-surface p-8 rounded-2xl border-l-4 border-secondary"> <h3 class="text-xl font-bold mb-4">Otevírací Doba</h3> <ul class="space-y-2"> <li class="flex justify-between border-b border-white/10 pb-2"><span>Po - Pá</span> <span>6:00 - 22:00</span></li> <li class="flex justify-between"><span>So - Ne</span> <span>8:00 - 20:00</span></li> </ul> </div> </div> <div class="map rounded-2xl overflow-hidden min-h-[300px] md:min-h-[400px] grayscale invert-[.9]"> <!-- Google Maps Placeholder --> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.898687258454!2d14.4378!3d50.0865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b949666275823%3A0x7e737c02c610214c!2sPrague!5e0!3m2!1sen!2scz!4v1620000000000!5m2!1sen!2scz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe> </div> </div> </div> </section>`;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Contact.astro", void 0);
+
+const $$Footer = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<footer class="bg-[#050505] py-12 border-t border-white/5"> <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left"> <div class="brand"> <a href="#" class="block text-2xl font-extrabold tracking-tight text-text mb-2">NEON<span class="text-primary">GYM</span></a> <p class="text-text-muted text-xs">&copy; ${(/* @__PURE__ */ new Date()).getFullYear()} Neon Gym. Všechna práva vyhrazena.</p> </div> <div class="socials flex gap-4"> <a href="#" aria-label="Instagram" class="text-text font-bold opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300">IG</a> <a href="#" aria-label="Facebook" class="text-text font-bold opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300">FB</a> <a href="#" aria-label="YouTube" class="text-text font-bold opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300">YT</a> </div> </div> </footer>`;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/components/gym_example/Footer.astro", void 0);
+
+const $$Astro = createAstro();
+const $$GymLayout = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$GymLayout;
+  return renderTemplate`<html lang="cs"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/gym_favicon.ico"><meta name="generator"${addAttribute(Astro2.generator, "content")}><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet"><title>Moderní Gym | Váš nový začátek</title>${renderHead()}</head> <body> ${renderSlot($$result, $$slots["default"])} ${renderScript($$result, "/Users/jannosek/development/websites/nosekjan-tech/src/layouts/GymLayout.astro?astro&type=script&index=0&lang.ts")}</body></html>`;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/layouts/GymLayout.astro", void 0);
+
+const $$Gym = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "GymLayout", $$GymLayout, {}, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Navbar", $$Navbar, {})} ${renderComponent($$result2, "Hero", $$Hero, {})} ${renderComponent($$result2, "About", $$About, {})} ${renderComponent($$result2, "Pricing", $$Pricing, {})} ${renderComponent($$result2, "Gallery", $$Gallery, {})} ${renderComponent($$result2, "Staff", $$Staff, {})} ${renderComponent($$result2, "Contact", $$Contact, {})} ${renderComponent($$result2, "Footer", $$Footer, {})} ` })}`;
+}, "/Users/jannosek/development/websites/nosekjan-tech/src/pages/gym.astro", void 0);
+
+const $$file = "/Users/jannosek/development/websites/nosekjan-tech/src/pages/gym.astro";
+const $$url = "/gym";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+    __proto__: null,
+    default: $$Gym,
+    file: $$file,
+    url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

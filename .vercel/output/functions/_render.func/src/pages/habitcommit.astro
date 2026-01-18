@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/habitcommit/Hero.astro";
+import Features from "../components/habitcommit/Features.astro";
+import PrivacyPolicy from "../components/habitcommit/PrivacyPolicy.astro";
+import Support from "../components/habitcommit/Support.astro";
+import { translations } from "../i18n/habitcommit";
+
+// Default to 'en'
+const lang = Astro.url.searchParams.get("lang") === "cs" ? "cs" : "en";
+---
+
+<Layout title="HabitCommit">
+  <main class="bg-slate-950 min-h-screen text-white">
+    <Hero lang={lang} />
+    <Features lang={lang} />
+    <PrivacyPolicy lang={lang} />
+    <Support lang={lang} />
+  </main>
+</Layout>
