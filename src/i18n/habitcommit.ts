@@ -42,7 +42,8 @@ export const translations = {
         },
         {
           title: "Soukromí na prvním místě",
-          description: "Vaše data jsou bezpečně uložena ve vašem zařízení. Kdykoli máte možnost si svá data stáhnout a nebo naopak importovat do jiného zařízení.",
+          description:
+            "Vaše data jsou bezpečně uložena ve vašem zařízení. Kdykoli máte možnost si svá data stáhnout a nebo naopak importovat do jiného zařízení.",
           icon: "🔒",
         },
         {
@@ -64,9 +65,19 @@ export const translations = {
           icon: "🤩",
         },
         {
+          title: "Ikony návyků",
+          description: "Přidávejte si ikony pro větší personalizaci.",
+          icon: "🏋️",
+        },
+        {
+          title: "Vlastní barvy návyků",
+          description: "Přizpůsobte si barvy svých návyků pro ještě větší personalizaci.",
+          icon: "🎨",
+        },
+        {
           title: "Aktivní vývoj",
           description:
-            "Aplikace je aktivně vývíjená a vždycky se snažím poskytnout vám ten nejlepší zážitek a přinášet nové funkce.",
+            "Aplikace je aktivně vývíjená a vždycky se snažím vám poskytnout ten nejlepší zážitek a přinášet nové funkce o které si píšete.",
           icon: "🚀",
         },
       ],
@@ -87,6 +98,12 @@ export const translations = {
           Aplikace nepoužívá žádné analytické nástroje třetích stran, které by sledovaly vaši aktivitu napříč aplikacemi a webovými stránkami.`,
         },
         {
+          title: "Nákupy v aplikaci",
+          content: `Aplikace nabízí nákupy v aplikaci (předplatné a jednorázové platby).<br><br>
+          Veškeré platby jsou zpracovávány společností Apple prostřednictvím vašeho Apple ID. Vývojář nemá přístup k vašim platebním údajům.<br><br>
+          Předplatné můžete spravovat a zrušit v nastavení svého Apple ID.`,
+        },
+        {
           title: "Oprávnění",
           content: `Aplikace může vyžadovat následující oprávnění pro správné fungování:<br>
           <ul class="list-disc pl-5 space-y-2 mt-2">
@@ -98,7 +115,58 @@ export const translations = {
           content: `Máte-li jakékoli dotazy ohledně ochrany soukromí, kontaktujte nás na emailu <a href="mailto:honzik.nosek22@gmail.com" class="text-blue-400 hover:text-blue-300 underline">honzik.nosek22@gmail.com</a>.`,
         },
       ],
-      lastUpdated: "Poslední aktualizace: 20. prosince 2025",
+      lastUpdated: "Poslední aktualizace: 4. února 2026",
+    },
+    terms: {
+      title: "Podmínky použití (EULA)",
+      sections: [
+        {
+          title: "Potvrzení",
+          content:
+            "Stažením a používáním aplikace HabitCommit souhlasíte s těmito podmínkami použití. Tato smlouva je uzavřena mezi vámi a vývojářem (Jan Nosek), nikoliv společností Apple. Za aplikaci a její obsah nese odpovědnost vývojář.",
+        },
+        {
+          title: "Rozsah licence",
+          content:
+            "Vývojář vám uděluje nepřenosnou licenci k používání aplikace na jakýchkoli produktech značky Apple, které vlastníte nebo ovládáte, v souladu s pravidly používání stanovenými v Podmínkách mediálních služeb Apple.",
+        },
+        {
+          title: "Předplatné a platby",
+          content:
+            "Aplikace může nabízet prémiové funkce formou předplatného nebo jednorázových nákupů. Platba bude stržena z vašeho Apple ID účtu při potvrzení nákupu. Předplatné se automaticky obnovuje, pokud není zrušeno alespoň 24 hodin před koncem aktuálního období. Svůj účet a předplatné můžete spravovat v nastavení Apple ID po nákupu.",
+        },
+        {
+          title: "Údržba a podpora",
+          content:
+            "Vývojář je výhradně odpovědný za poskytování údržby a podpory pro aplikaci. Apple nemá žádnou povinnost poskytovat jakékoli služby údržby a podpory pro aplikaci.",
+        },
+        {
+          title: "Záruka",
+          content:
+            "Aplikace je poskytována „jak stojí a leží“. Vývojář nenese odpovědnost za žádné škody vzniklé používáním aplikace. V případě jakéhokoli selhání aplikace v souladu s příslušnou zárukou se můžete obrátit na Apple a ten vám vrátí kupní cenu aplikace. V maximálním rozsahu povoleném platnými zákony nebude mít Apple v souvislosti s aplikací žádné další záruční povinnosti.",
+        },
+        {
+          title: "Nároky na produkt",
+          content:
+            "Berete na vědomí, že za řešení jakýchkoli nároků týkajících se aplikace nebo vašeho držení a/nebo používání aplikace je odpovědný vývojář, nikoli společnost Apple, včetně, ale nikoli výhradně: (i) nároků z odpovědnosti za výrobek; (ii) jakéhokoli nároku, že aplikace neodpovídá jakémukoli platnému právnímu nebo regulačnímu požadavku; a (iii) nároků vyplývajících z ochrany spotřebitele nebo podobných právních předpisů.",
+        },
+        {
+          title: "Dodržování právních předpisů",
+          content:
+            "Prohlašujete a zaručujete, že (i) se nenacházíte v zemi, na kterou se vztahuje embargo vlády USA nebo která byla vládou USA označena za zemi podporující terorismus, a (ii) nejste uvedeni na žádném seznamu zakázaných nebo omezených stran vlády USA.",
+        },
+        {
+          title: "Kontakt na vývojáře",
+          content:
+            "Jakékoli dotazy, stížnosti nebo nároky týkající se aplikace směřujte na:<br><br>Jan Nosek<br>Email: honzik.nosek22@gmail.com",
+        },
+        {
+          title: "Třetí strana oprávněná z této smlouvy",
+          content:
+            "Berete na vědomí a souhlasíte s tím, že společnost Apple a její dceřiné společnosti jsou oprávněnými třetími stranami této licenční smlouvy a že po vašem přijetí těchto podmínek bude mít společnost Apple právo (a bude se mít za to, že toto právo přijala) vymáhat tuto smlouvu vůči vám jako oprávněná třetí strana.",
+        },
+      ],
+      lastUpdated: "Poslední aktualizace: 4. února 2026",
     },
     support: {
       title: "Podpora",
@@ -175,9 +243,19 @@ export const translations = {
           icon: "🤩",
         },
         {
+          title: "Habit icons",
+          description: "Add icons to your habits for greater personalization.",
+          icon: "🏋️",
+        },
+        {
+          title: "Custom habit colors",
+          description: "Customize the colors of your habits for even greater personalization.",
+          icon: "🎨",
+        },
+        {
           title: "Active Development",
           description:
-            "The app is actively developed and I always try to provide the best experience for you alongside new features.",
+            "The app is actively developed and I always try to provide the best experience for you alongside new features which you request.",
           icon: "🚀",
         },
       ],
@@ -198,6 +276,12 @@ export const translations = {
           The application does not use any third-party analytics tools that would track your activity across applications and websites.`,
         },
         {
+          title: "In-App Purchases",
+          content: `The application offers in-app purchases (subscriptions and one-time payments).<br><br>
+          All payments are processed by Apple through your Apple ID. The developer does not have access to your payment details.<br><br>
+          You can manage and cancel subscriptions in your Apple ID settings.`,
+        },
+        {
           title: "Permissions",
           content: `The application may require the following permissions to function correctly:<br>
           <ul class="list-disc pl-5 space-y-2 mt-2">
@@ -209,7 +293,58 @@ export const translations = {
           content: `If you have any questions regarding privacy, please contact us at <a href="mailto:honzik.nosek22@gmail.com" class="text-blue-400 hover:text-blue-300 underline">honzik.nosek22@gmail.com</a>.`,
         },
       ],
-      lastUpdated: "Last updated: December 20, 2025",
+      lastUpdated: "Last updated: February 4, 2026",
+    },
+    terms: {
+      title: "Terms of Use (EULA)",
+      sections: [
+        {
+          title: "Acknowledgement",
+          content:
+            "By downloading and using the HabitCommit app, you agree to these Terms of Use. This agreement is concluded between you and the Developer (Jan Nosek) only, and not with Apple. The Developer is solely responsible for usage and content thereof.",
+        },
+        {
+          title: "Scope of License",
+          content:
+            "The Developer grants you a non-transferable license to use the App on any Apple-branded products that you own or control and as permitted by the Usage Rules set forth in the Apple Media Services Terms and Conditions.",
+        },
+        {
+          title: "Subscriptions and Payments",
+          content:
+            "The app may offer premium features via auto-renewing subscriptions or one-time purchases. Payment will be charged to your Apple ID account at confirmation of purchase. Subscription automatically renews unless it is canceled at least 24 hours before the end of the current period. You can manage and cancel your subscriptions by going to your App Store account settings after purchase.",
+        },
+        {
+          title: "Maintenance and Support",
+          content:
+            "The Developer is solely responsible for providing any maintenance and support services with respect to the licensed usage. Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the licensed usage.",
+        },
+        {
+          title: "Warranty",
+          content:
+            "The App is provided 'as-is'. The Developer makes no warranties regarding the App. In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the App to you; and that, to the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App.",
+        },
+        {
+          title: "Product Claims",
+          content:
+            "You acknowledge that the Developer, not Apple, is responsible for addressing any claims of the End-User or any third party relating to the licensed application or the end-user’s possession and/or use of that licensed application, including, but not limited to: (i) product liability claims; (ii) any claim that the licensed application fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection or similar legislation.",
+        },
+        {
+          title: "Legal Compliance",
+          content:
+            "You represent and warrant that (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a 'terrorist supporting' country; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.",
+        },
+        {
+          title: "Developer Contact",
+          content:
+            "Any questions, complaints or claims with respect to the App should be directed to:<br><br>Jan Nosek<br>Email: honzik.nosek22@gmail.com",
+        },
+        {
+          title: "Third Party Beneficiary",
+          content:
+            "You acknowledge and agree that Apple, and Apple’s subsidiaries, are third party beneficiaries of this EULA, and that, upon your acceptance of the terms and conditions of this EULA, Apple will have the right (and will be deemed to have accepted the right) to enforce this EULA against you as a third party beneficiary thereof.",
+        },
+      ],
+      lastUpdated: "Last updated: February 4, 2026",
     },
     support: {
       title: "Support",

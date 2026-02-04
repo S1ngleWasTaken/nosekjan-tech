@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PrivacyPolicyComponent from "../../components/habitcommit/PrivacyPolicy.astro";
+
+const lang = Astro.url.searchParams.get("lang") === "cs" ? "cs" : "en";
+---
+
+<Layout title="Privacy Policy - HabitCommit">
+  <main class="bg-slate-950 min-h-screen text-white">
+    <PrivacyPolicyComponent lang={lang} />
+  </main>
+</Layout>
