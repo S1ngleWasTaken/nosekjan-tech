@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TermsOfUseComponent from "../../components/habitcommit/TermsOfUse.astro";
+
+const lang = Astro.url.searchParams.get("lang") === "cs" ? "cs" : "en";
+---
+
+<Layout title="Terms of Use - HabitCommit">
+  <main class="bg-slate-950 min-h-screen text-white">
+    <TermsOfUseComponent lang={lang} />
+  </main>
+</Layout>
